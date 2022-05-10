@@ -20,6 +20,7 @@ public class Produtos extends ProdutoAbstrato{
         super(nome, preco, quantidade);
         
     }
+    
     public Produtos(){
     }
     
@@ -61,8 +62,4 @@ public class Produtos extends ProdutoAbstrato{
     public double getTotalprodutos(){
         return this.quantidade;
     }
-
-    
-    
-    
 }
