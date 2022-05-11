@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  */
 public class CarrinhoMenu extends javax.swing.JFrame{
     public String mostra;
-    public String nome;
+    
 
     /**
      * Creates new form CarrinhoMenu

@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class CardapioMenu extends javax.swing.JFrame {
     public String nome;
-    
+    public String entrada;
     
     /**
      * Creates new form CardapioMenu
@@ -23,8 +23,9 @@ public class CardapioMenu extends javax.swing.JFrame {
         initComponents();
         
     }
-    
-    
+    public CardapioMenu(String nome){
+        this.nome = nome;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -132,16 +133,19 @@ public class CardapioMenu extends javax.swing.JFrame {
 
     private void txtClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClienteActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtClienteActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         nome = txtCliente.getText();
+        if (nome.isEmpty() || nome.isBlank() || !nome.matches("[a-zA-Z\s]+")){
+            JOptionPane.showMessageDialog(null, "Só é permitida letras e o campo não pode estar vázio");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
     public String getNome(){
         return this.nome;
     }
-    
     /**
      * @param args the command line arguments
      */
