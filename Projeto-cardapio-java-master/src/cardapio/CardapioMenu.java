@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author moises
  */
 public class CardapioMenu extends javax.swing.JFrame {
-    
+    public String nome;
     
     
     /**
@@ -132,19 +132,16 @@ public class CardapioMenu extends javax.swing.JFrame {
 
     private void txtClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClienteActionPerformed
         // TODO add your handling code here:
-        Cliente cliente = new Cliente();
-        cliente.setCliente(txtCliente.getText());
-        CardapioMenu card = new CardapioMenu();
-        
-        //this.cliente = txtCliente.getText(); //Vai pegar o que está escrito na caixa e jogar pra cliente
     }//GEN-LAST:event_txtClienteActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        nome = txtCliente.getText();
     }//GEN-LAST:event_jButton1ActionPerformed
-    /*public void exportarNome(Cliente cliente){
-        nome.setText(cliente.getCliente());
-    }*/
+    public String getNome(){
+        return this.nome;
+    }
+    
     /**
      * @param args the command line arguments
      */
